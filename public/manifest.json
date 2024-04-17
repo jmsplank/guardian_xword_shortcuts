@@ -9,7 +9,8 @@
   "action": {
     "default_icon": {
       "152": "favicon.png"
-    }
+    },
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
