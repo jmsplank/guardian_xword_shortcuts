@@ -1,15 +1,12 @@
 #hover-overlay {
     position: fixed;
-    top: 0;
+    top: 0.5%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000;
     padding: 8px 15px;
     background-color: black;
     color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: none;
-    z-index: 1000;
 }
 
 span#detected-clue {

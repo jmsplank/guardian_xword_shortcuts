@@ -71,22 +71,22 @@ document.addEventListener("mouseover", (event) => {
   }
 
   // Create or update the overlay box
-  let overlay = document.getElementById("hover-overlay");
+  let overlay = document.getElementById("hover-overlay") as HTMLDialogElement;
   if (!overlay) {
-    overlay = document.createElement("div");
+    overlay = document.createElement("dialog") as HTMLDialogElement;
     overlay.id = "hover-overlay";
     document.body.appendChild(overlay);
   }
 
   // Set the text and make the overlay visible
-  overlay.innerHTML = overlayText.join();
-  overlay.style.display = "block";
+  overlay.innerHTML = `<article>${overlayText.join()}</article>`;
+  overlay.show();
 });
 
 document.addEventListener("mouseout", function () {
-  let overlay = document.getElementById("hover-overlay");
+  let overlay = document.getElementById("hover-overlay") as HTMLDialogElement;
   if (overlay) {
-    overlay.style.display = "none";
+    overlay.close();
   }
 });
 
